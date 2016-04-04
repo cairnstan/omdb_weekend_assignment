@@ -4,9 +4,7 @@ $(function(){
   var tankGirl = {};
   var bigLebowski = {};
 
-
   //ajax call for Tank Girl
-  // $("#tankGirlButton").on("click", function(){
   $.ajax({
     url: "http://www.omdbapi.com/?t=tank+girl&y=&plot=short&r=json",
     type: "GET"
@@ -15,7 +13,7 @@ $(function(){
     tankGirl = response;
     displayTankGirl(tankGirl);
   })
-  // })
+
   //ajax call for Big Lebowski
   $.ajax({
     url: "http://www.omdbapi.com/?t=big+lebowski&y=&plot=short&r=json",
@@ -25,6 +23,7 @@ $(function(){
     bigLebowski = response;
     displayBigLebowski(bigLebowski);
   })
+
 //ajax call for Me and You and Everyone We Know
   $.ajax({
     url: "http://www.omdbapi.com/?t=me+and+you+and+everyone+we+know&y=&plot=short&r=json",
@@ -34,7 +33,23 @@ $(function(){
     meAndYou = response;
     displayMeAndYou(meAndYou);
   })
+
+  //Tank Girl click event
+  $("#tankGirlButton").on("click", function(){
+  $(".girlTank").fadeToggle(1000);
+  })
+
+  //Big Lebowski click event
+  $("#bigLebowskiButton").on("click", function(){
+    $(".lebowskiBig").fadeToggle(1000);
+    })
+
+  //Me and You click event
+  $("#meAndYouButton").on("click", function(){
+    $(".youAndMe").fadeToggle(1000);
+    })
 });
+
 //This function will put the information about Tank Girl on the page
 function displayTankGirl(movie){
   $(".titleTankGirl").text(movie.Title);
@@ -44,6 +59,7 @@ function displayTankGirl(movie){
   $(".plotTankGirl").text(movie.Plot);
   $(".yearTankGirl").text("Driving tanks and kicking ass since " + movie.Year);
 }
+
 //This function will put the information about Big Lebowski on the page
 function displayBigLebowski(movie){
   $(".titleBigLebowski").text(movie.Title);
@@ -53,6 +69,7 @@ function displayBigLebowski(movie){
   $(".plotBigLebowski").text(movie.Plot);
   $(".yearBigLebowski").text("The dude has abided since " + movie.Year);
 }
+
 //This function will put the information about Me and You and Everyone We Know on the page
 function displayMeAndYou(movie){
   $(".titleMeAndYou").text(movie.Title);
@@ -62,6 +79,7 @@ function displayMeAndYou(movie){
   $(".plotMeAndYou").text(movie.Plot);
   $(".yearMeAndYou").text("))<>(( forever starting in " + movie.Year);
 }
+
 //Tried to use this as a function to pass each movie into, but the movies kept getting rewritten as it was passed through.
 //I worked on trying many different things to assign it to each div class specifically and none of the things I tried worked for me.
 //Still think there is a way that could make it work, but the individual functions above are getting the results I want.

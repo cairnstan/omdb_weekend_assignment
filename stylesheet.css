@@ -3,25 +3,27 @@
 @import url(https://fonts.googleapis.com/css?family=Philosopher:400,700,400italic,700italic);
 
 .youAndMe {
-  border: 10px solid aquamarine;
-  margin: 20px 150px 20px 150px;
+  border: 20px ridge aquamarine;
+  margin: 20px 200px 20px 200px;
   font-family: 'Quicksand', sans-serif;
+  display: none;
 }
 .girlTank {
-  border: 10px solid tomato;
-  margin: 20px 150px 20px 150px;
+  border: 20px ridge tomato;
+  margin: 20px 200px 20px 200px;
   font-family: 'Bangers', cursive;
+  display: none;
 }
 .lebowskiBig {
-  border: 10px solid darkgoldenrod;
-  margin: 20px 150px 20px 150px;
+  border: 20px ridge darkgoldenrod;
+  margin: 20px 200px 20px 200px;
   font-family: 'Philosopher', sans-serif;
-
+  display: none;
 }
 .titleTankGirl, .titleBigLebowski, .titleMeAndYou {
   font-size: 40px;
   font-weight: bold;
-
+  text-shadow: 2px 2px #5F5558;
 }
 p {
   text-align: center;
@@ -32,8 +34,38 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  height: 400px;
+  border: 3px solid black;
 }
 body {
-  background: linear-gradient(lightblue, lemonchiffon, thistle);
-
+  background: radial-gradient(#0b8793, #360033);
+  color: white;
+}
+button {
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 30px;
+  box-shadow: 4px 4px 2px black;
+}
+#tankGirlButton {
+  background-color: tomato;
+  font-family: 'Bangers', cursive;
+  float: left;
+  margin-left: 75px;
+}
+#bigLebowskiButton {
+  background-color: darkgoldenrod;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bold;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+#meAndYouButton {
+  background-color: aquamarine;
+  font-family: 'Quicksand', sans-serif;
+  float: right;
+  margin-right: 75px;
 }
